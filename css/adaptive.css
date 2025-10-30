@@ -30,7 +30,7 @@
  }
 }
 
-@media (max-width:450px){
+@media (max-width:660px){
     .menu{
         flex-wrap: wrap;
         height: max-content;
@@ -41,14 +41,14 @@
         gap: 4px;
     }
     .h1-container{
-        height: 75%;
-        margin-top: 150px;
+        height: 60%;
+        margin-top: 240px;
     }
-}
-
-@media (max-width: 425px){
      .menu img{
         height: 150px;
         width: 150px;
     } 
+    .h1-container h1{
+        font-size: 64px;
+    }
 }

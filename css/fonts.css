@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Kreadon-ExtraBold';
+    src: url('../fonts/Kreadon/Kreadon-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kreadon-Bold';
+    src: url('../fonts/Kreadon/Kreadon-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kreadon-Demi';
+    src: url('../fonts/Kreadon/Kreadon-Demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kreadon-Medium';
+    src: url('../fonts/Kreadon/Kreadon-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kreadon-Regular';
+    src: url('../fonts/Kreadon/Kreadon-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kreadon-Light';
+    src: url('../fonts/Kreadon/Kreadon-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kreadon-ExtraLight';
+    src: url('../fonts/Kreadon/Kreadon-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}

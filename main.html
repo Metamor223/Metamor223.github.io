@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/animated-scroll.css">
+    <link rel="stylesheet" href="./css/burger.css">
+    <link rel="stylesheet" href="./css/adaptive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Card</title>
+</head>
+<body>
+    <div class="first-container">
+        <ul class="menu">
+                <li><a href="https://web.telegram.org/k/#@tumb0chka1">Telegram</a><img src="./images/qr-telegram.svg" alt="telegram qr-code"></li>
+                <li><a href="https://github.com/Metamor223">Github</a><img src="./images/qr-github.svg" alt="Github qr-code"></li>
+                <li><a href="#">Email</a><img src="./images/qr-email.svg" alt="email qr-code"></li>
+            </ul>
+        <div class="little-first-con">
+           <header>
+                <nav>
+                    <div class="nav-container">
+                        <button class="menu-toggle" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                                <path class="line line2" d="M 20,50 H 80" />
+                                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                            </svg>
+                        </button>
+                    </div>
+                </nav>
+            </header>
+            <div class="h1-container">
+                <h1>Dmitry Panov - lazy programmer</h1>
+                 <div class="arrow-7">
+                <a href ="#section2">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="second-container" id="section2">
+        <div class="little-second-con">
+            <div class="list-of-work">
+                <h2 data-image="../images/MakeUp.png" data-link="http://f91193ic.beget.tech" data-text="MakeUp service - My first commercial app, which I wrote after completing my second year of college.<br><br> Was ultimately rejected because the client decided to ignore me halfway through the project.<br> It's written in HTML + CSS, with a bit of PHP for sending form data to a Telegram bot, and features a responsive layout.">1</h2>
+                <h2 data-image="../images/SC.png" data-text="Silent Collective - This is my third creation.<br><br> I decided not to show the second one because I didn't like it at all. This site was made using React + Node + Mobx + PostgreSQL, it has multiple pages, and a lot of effort was put into its visual component.<br> This site is the main website for the Silent Collective company.<br>It's also the first website I've made with a team member, specifically a designer." id="work2" data-color="snow">2</h2>
+            </div>
+            <div class="page-of-work">
+                <div class="work-content"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/burger.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+@media (max-width:1640px){
+    .little-first-con{
+        width: 90%;
+    }
+    
+    .little-second-con {
+        flex-direction: column;
+        width: 100% !important;  
+        max-width: 100% !important;
+    }
+    .page-of-work {
+        max-width: 90% !important; /* Адаптируется к экрану */
+        margin: 0 40px 20px 40px !important; /* Центрируем, убираем боковые маржины если нужно */
+        box-sizing: border-box !important;
+         overflow-y: auto; 
+    }
+    .work-content {
+        padding: 70px 10px 20px 10px !important; /* Меньше padding для сужения */
+        font-size: 32px !important; /* Уменьшаем шрифт для теста (верните если не нужно) */
+    }
+ .list-of-work{
+    flex-direction: row;
+    margin: 65px 0 65px 0;
+    height: 60px;
+    width: max-content;
+ }
+ .list-of-work h2{
+    width: 50px;
+    height: 100%;
+ }
+}
+
+@media (max-width:450px){
+    .menu{
+        flex-wrap: wrap;
+        height: max-content;
+        gap: 15px;
+        height: 100vh;
+    }
+    .menu li{
+        gap: 4px;
+    }
+    .h1-container{
+        height: 75%;
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 400px){
+     .menu img{
+        height: 150px;
+        width: 150px;
+    } 
+}

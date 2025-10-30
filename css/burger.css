@@ -1,0 +1,132 @@
+header{
+    width: 100%;
+    background-color: #000;
+    height: 60px;
+    position: relative;
+}
+
+.nav-container {
+    padding: 1rem;
+    height: 100%;
+    color: snow;
+    position: relative; /* Для абсолютного позиционирования меню */
+    width: 100%; /* Фиксированная высота навбара */
+}
+
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    z-index: 1001; /* Выше меню */
+    position: absolute;
+    right: 1rem; /* Позиция burger в правом углу */
+    top: 50%;
+    transform: translateY(0%);
+}
+
+.line {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+    stroke-dasharray: 60 197;
+    stroke-width: 3;
+    transition-delay: 0.35s;
+}
+
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 3;
+    transition-delay: 0.35s;
+}
+
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 3;
+    transition-delay: 0.35s;
+}
+
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 3;
+    stroke: #000;
+    
+}
+
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 3;
+    stroke: #000;
+    
+}
+
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 3;
+    stroke: #000;
+    
+}
+
+/* Стили для выдвигающегося меню (падение сверху вниз) */
+.menu {
+    position: absolute;
+    top: 0; /* Начинается сверху (оверлей над всем) */
+    left: 0;
+    width: 100%; /* На всю ширину сайта */
+    height: 100vh; /* На всю высоту экрана */
+    background-color: snow;
+    color: #000;
+    display: flex; /* Flex для центрирования */
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    z-index: 999; /* Ниже burger, но выше контента */
+    transform: translateY(-100%); /* Скрыто сверху */
+    transition: transform 0.4s ease-in-out; /* Анимация падения вниз */
+    overflow: hidden;
+    gap: 40px;
+    overflow-y: hidden;
+}
+
+.menu.active {
+    transform: translateY(0%); /* Активируем: падает вниз */
+    overflow: hidden;
+}
+
+.menu li {
+    margin: 1.5rem 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu a {
+    font-size: 40px; /* Шрифт 40px */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding-bottom: 3px;
+    transition: 0.3s;
+    border-bottom: 2px solid snow;
+}
+
+.menu a:hover{
+    border-bottom: 2px solid #000;
+}
+
+.menu img{
+    height: 200px;
+    width: 200px;
+}

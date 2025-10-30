@@ -1,0 +1,177 @@
+*{
+	margin: 0;
+	padding: 0;
+    border: 0;
+	box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Kreadon-Regular';
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:snow;
+}
+
+.first-container, .second-container{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.little-first-con{
+    width: 1640px;
+    height: 100%;
+}
+
+.little-first-con ul{
+    width: 100%;
+    height: 80px;
+}
+
+.little-first-con h1{
+    font-family: 'Kreadon-ExtraLight';
+    font-size: 72px; 
+    z-index: 0;
+}
+
+.h1-container{
+    margin-top: 350px;
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.second-container{
+    background-color: snow;
+    position: relative;
+    overflow: hidden;
+}
+
+.second-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--background-image, none); /* Дефолт: none */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Степень blur — настрой (5px слабее, 20px сильнее) */
+    opacity: 0; /* Изначально прозрачный (для fade-in) */
+    z-index: 0; /* Под всем контентом (чтобы текст и другие элементы были поверх) */
+    transition: opacity 0.5s ease, filter 0.5s ease; /* Плавная смена opacity и blur */
+}
+
+/* Когда активен — показываем background */
+.second-container.active::before {
+    opacity: 1;
+}
+
+.little-second-con{
+    width: 1640px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Чтобы был поверх ::before */
+    z-index: 1; /* Выше blur */
+}
+
+.list-of-work{
+    width: 75px;
+    height: 750px;
+    margin: 105px 0 105px 0;
+    border-radius: 10px;
+    background-color: snow; 
+    color: black;
+    border: 2px solid #fff; 
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); 
+    animation: rainbow-glow 5s linear infinite; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3px;
+}
+
+.list-of-work h2{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgb(31, 31, 31);
+    cursor: pointer;
+    padding: 15px;
+}
+
+@keyframes rainbow-glow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.page-of-work{
+    width: 1425px;
+    height: 750px;
+    border-radius: 10px;
+    border: 1px solid snow;
+    box-shadow: 0 0 30px rgb(31, 31, 31);
+     position: relative; /* Для позиционирования текста */
+    background-color: transparent; /* Без собственного фона — прозрачный, чтобы виден был blur родителя */
+}
+
+.work-content {
+    position: relative;
+    z-index: 1;
+    padding: 70px 20px 20px 20px;
+    color: #000; /* Чёрный для читаемости на светлом blur (измени на snow если тёмные картинки) */
+    font-size: 40px;
+    text-align: start;
+    opacity: 0;
+    letter-spacing: 1.5px;
+    transition: opacity 0.5s ease 0.2s; /* Добавил delay 0.2s, чтобы текст появлялся после background */
+    pointer-events: none; /* Чтобы hover не срабатывал на тексте (если мешает) */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;  
+}
+
+.second-container.active .work-content {
+    opacity: 1;
+}
+
+.project-button {
+    display: inline-block; /* Чтобы была как кнопка */
+    margin-top: 20px; /* Отступ сверху от текста */
+    padding: 10px 20px; /* Размер кнопки */
+    background-color: snow; /* Цвет фона (синий, измени) */
+    color: #000; /* Цвет текста */
+    text-decoration: none; /* Убрать подчёркивание */
+    border-radius: 5px; /* Закруглённые углы */
+    font-size: 16px; /* Размер текста кнопки */
+    transition: background-color 0.3s; /* Плавный hover */
+    cursor: pointer; /* Курсор "рука" для указания кликабельности */
+    pointer-events: auto;
+}
+
+.project-button:hover {
+    color: snow;
+    background-color: black; /* Цвет при наведении */
+}
